@@ -1,6 +1,6 @@
-public import Cardinal
-public import Ordinal
-public import Property
+public import struct Cardinal.Cardinal
+public import struct Ordinal.Ordinal
+public import struct Property.Property
 
 extension Ordinal {
 
@@ -25,7 +25,7 @@ extension Property where Tag == Ordinal.Retreat, Base == Ordinal {
     @inlinable
     public func clamped(by count: Cardinal, to bound: Base) -> Base {
 
-        guard bound < base else {
+        guard bound.rawValue < base.rawValue else {
             return bound
         }
 

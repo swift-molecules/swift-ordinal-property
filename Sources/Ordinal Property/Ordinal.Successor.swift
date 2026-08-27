@@ -1,5 +1,5 @@
-public import Ordinal
-public import Property
+public import struct Ordinal.Ordinal
+public import struct Property.Property
 
 extension Ordinal {
 

@@ -1,9 +1,10 @@
+public import struct Ordinal.Ordinal
 public import Ordinal_Cardinal
 
 extension Swift.Range where Bound: Ordinal.`Protocol` {
 
     @inlinable
-    public var isEmpty: Bool { lowerBound == upperBound }
+    public var isEmpty: Bool { lowerBound.ordinal.rawValue == upperBound.ordinal.rawValue }
 }
 
 extension Swift.Range where Bound: Ordinal.`Protocol` {

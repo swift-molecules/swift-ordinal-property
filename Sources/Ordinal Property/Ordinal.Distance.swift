@@ -1,7 +1,8 @@
-public import Cardinal
-public import Ordinal
+public import struct Cardinal.Cardinal
+public import Carrier
+public import struct Ordinal.Ordinal
 public import Ordinal_Cardinal
-public import Property
+public import struct Property.Property
 
 extension Ordinal {
 
@@ -20,7 +21,7 @@ extension Property where Tag == Ordinal.Distance, Base: Ordinal.`Protocol` {
 
     @inlinable
     public func forward(to other: Base) throws(Ordinal.Error) -> Base.Count {
-        if other.ordinal < base.ordinal {
+        if other.ordinal.rawValue < base.ordinal.rawValue {
             throw .notForward
         }
         return Base.Count(Cardinal(other.ordinal.rawValue - base.ordinal.rawValue))
