@@ -22,10 +22,6 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-ordinal-cardinal.git",
-            branch: "main"
-        ),
-        .package(
             url: "https://github.com/swift-atoms/swift-cardinal.git",
             branch: "main"
         ),
@@ -43,7 +39,7 @@ let package = Package(
             name: "Ordinal Property",
             dependencies: [
                 .product(name: "Ordinal", package: "swift-ordinal"),
-                .product(name: "Ordinal Cardinal", package: "swift-ordinal-cardinal"),
+                .product(name: "Ordinal Cardinal", package: "swift-ordinal"),
                 .product(name: "Cardinal", package: "swift-cardinal"),
                 .product(name: "Carrier", package: "swift-carrier"),
                 .product(name: "Property", package: "swift-property"),
@@ -54,7 +50,7 @@ let package = Package(
             dependencies: [
                 "Ordinal Property",
                 .product(name: "Ordinal", package: "swift-ordinal"),
-                .product(name: "Ordinal Cardinal", package: "swift-ordinal-cardinal"),
+                .product(name: "Ordinal Cardinal", package: "swift-ordinal"),
                 .product(name: "Cardinal", package: "swift-cardinal"),
             ]
         ),
